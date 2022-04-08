@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>ALL FOR ONE - PRODUCTO</title>
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link href="css/navBar.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="css/producto.css" rel="stylesheet">
+    <script src="js/Carrito.js"></script>
+    <script src="js/CarritoFuncionalidad.js"></script>
+    <script src="js/producto.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="imagenes/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="imagenes/favicon.ico" type="image/x-icon">
+
+
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar navbar-expand-lg fixed-top py-3 ">
+            <div class="container"><a href="../index.html" class="navbar-brand text-uppercase font-weight-bold" style="color: black;"><img src="imagenes/logo.png" alt="logo"></a>
+                <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
+                
+                <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto" id="navB">
+                        <li class="nav-item active" id="login"><a href="perfil.html" class="nav-link text-uppercase font-weight-bold" style="color: black;" id="perfil">Perfil</a></li>
+                        <li class="nav-item"><a href="checkout.html" class="nav-link text-uppercase font-weight-bold" style="color: black;" id="carrito"><i class="fa fa-shopping-cart"></i></a></li>
+                        <li class="nav-item"><a href="productos.html" class="nav-link text-uppercase font-weight-bold" style="color: black;" id="productos">Productos</a></li>
+                        <li class="nav-item"><a href="contacto.html" class="nav-link text-uppercase font-weight-bold" style="color: black;" id="contacto">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <hr style="margin-top:75px; margin-bottom: 0%;">
+
+    <div class="container" style="margin-top:3%; margin-bottom: 0%;">
+        <div class="card">
+            <div class="row">
+                <aside class="col-sm-5 border-right" id="borde_derecho">
+                    <div class="gallery-wrap">
+                        <div class="img-big-wrap" style="margin-top: 5%;">
+                            <div> <a  id="imagenProducto"></a></div>
+                        </div> 
+                        <div class="img-small-wrap" style="margin-top: 5%;">
+                            <div class="item-gallery" id="imgRotada1"> </div>
+                            <div class="item-gallery" id="imgRotada2"> </div>
+                            <div class="item-gallery" id="imgRotada3"> </div>
+                            <div class="item-gallery" id="imgRotada4"> </div>
+                        </div>
+                    </div> 
+                </aside>
+                <aside class="col-sm-7">
+                    <div class="card-body p-5" id="linea">
+                        <div id="nombreProducto"></div>
+
+                        <p class="price-detail-wrap">
+                            <span class="price h3 text-warning" id="precioProducto">
+                            </span>
+
+                        </p> 
+                        <dl class="item-property">
+                            <dt>Descripcion</dt>
+                            <dd id="descripcionProducto">
+
+                            </dd>
+                        </dl>
+
+                        <dl class="param param-feature">
+                            <dt>Color</dt>
+                            <dd id="colorProducto">
+
+                            </dd>
+                        </dl> 
+                        <dl class="param param-feature">
+                            <dt>Delivery</dt>
+                            <dd>EEUU y Europa</dd>
+                        </dl>
+
+                       
+                        
+                        <div id="botonCarrito">
+                          
+                        </div>
+                      
+                    </div> 
+                </aside> 
+            </div> 
+        </div> 
+
+
+    </div>
+    
+
+    <div class="container">
+      
+        <div class="title article-margin" style="padding-left: 25px;margin-left: 0px;padding-right: 0px; margin-top:5%">
+         
+            <h4><strong>RECOMENDADOS</strong><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Emoji_u1f525.svg/1200px-Emoji_u1f525.svg.png" width="30" alt="recomendados"></h4>
+          
+         
+        </div>
+        <hr>
+        <div class="row col-12" style="padding-left: 5px;margin-left: 0px;padding-right: 0px;margin-top: 3%;">
+          <div class="col-12">
+              <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+  
+                  <div class="carousel-inner">
+                      <div class="carousel-item active">
+                          <div class="row" id="baratoWeb">
+  
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+       
+
+      </div>
+
+   
+ <footer class="text-light" style="margin-top: 3%;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-lg-4 col-xl-3">
+                <h5>Sobre Mi</h5>
+                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                <p class="mb-0">
+                    Web creada por Jesus Maria De Felipe Prado, esta web consiste en venta de productos y pagos online con criptomonedas.
+                </p>
+            </div>
+  
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
+                <h5>Informacion</h5>
+                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                <ul class="list-unstyled">
+                    <li><a href="https://twitter.com/JesusDeFelipe17">Twitter</a></li>
+                    <li><a href="https://www.instagram.com/jesusdefelipe17/">Instagram develop</a></li>
+                    <li><a href="https://www.instagram.com/jmdfcompany/">Instagram Company</a></li>
+                </ul>
+            </div>
+  
+         
+  
+            <div class="col-md-4 col-lg-3 col-xl-3">
+                <h5>Contact</h5>
+                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-home mr-2"></i>JMFCompany</li>
+                    <li><i class="fa fa-envelope mr-2"></i> jmdfcompany@gmail.com</li>
+                    <li><i class="fa fa-phone mr-2"></i>670778054</li>
+                </ul>
+            </div>
+            <div class="col-12 copyright mt-3">
+                <p class="float-left">
+                    <a href="#">Volver Arriba</a>
+                </p>
+                <p class="text-right text-muted">Creado por JMF <span>v. 1.0</span></p>
+            </div>
+        </div>
+    </div>
+  </footer>    
+
+    <script>
+
+        $(document).ready(function () {
+            $(window).on('scroll', function () {
+                if ($(window).scrollTop() > 1) {
+
+                    $('.navbar').addClass('bg-light');
+                } else {
+                    $('.navbar').removeClass('bg-light');
+                }
+
+            });
+        });
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

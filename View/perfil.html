@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>ALL FOR ONE - PERFIL</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link href="css/navBar.css" rel="stylesheet" >
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/perfil.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+<link href="css/perfil.css" rel="stylesheet" >
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="shortcut icon" href="imagenes/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="imagenes/favicon.ico" type="image/x-icon">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <nav class="navbar navbar-expand-lg fixed-top py-3 ">
+        <div class="container"><a href="../index.html" class="navbar-brand text-uppercase font-weight-bold" style="color: black;"><img src="imagenes/logo.png" alt="logo"></a>
+            <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
+            
+            <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto" id="navB">
+                    <li class="nav-item active" id="login"><a href="perfil.html" class="nav-link text-uppercase font-weight-bold" style="color: black;" id="perfil">Perfil</a></li>
+                    <li class="nav-item"><a href="checkout.html" class="nav-link text-uppercase font-weight-bold" style="color: black;"><i class="fa fa-shopping-cart"></i></a></li>
+                    <li class="nav-item"><a href="productos.html" class="nav-link text-uppercase font-weight-bold" style="color: black;">Productos</a></li>
+                    <li class="nav-item"><a href="contacto.html" class="nav-link text-uppercase font-weight-bold" style="color: black;">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+
+  <hr style="margin-top:100px">
+
+  <div class="container-fluid" style="margin-top:100px">
+    <div class="container">
+      <div class="main-body">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex flex-column align-items-center text-center" id="imagenPerfil">
+                  
+                  
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="container">
+
+              <br>
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" data-toggle="tab" href="#datos">Perfil</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#menu1" id="anadirProductos">Anadir Producto</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#menu2" id="pedidosProcesandoUsuario">Pedidos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#pedidoEnviadoRecibido" id="pedidoEnviadoRecibidoUsuario">Pedidos Enviados/Cancelado</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#menu3" id="pedidosParaProcesar">Pedidos para procesar</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#menu4" id="mostrarProductos">Productos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#menu5" id="mostrarUsuarios">Usuarios</a>
+                </li>
+              </ul>
+
+
+              <div class="tab-content">
+                <div id="datos" class="container tab-pane active"><br>
+
+                  <h3>Datos</h3>
+
+                  <form class="form-horizontal"  id="formularioPerfil" action="../Controller/redireccion.php" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="accion" id="accion1" value="actualizarUser">
+                  </form>
+                </div>
+
+                <div id="menu1" class="container tab-pane fade"><br>
+                  <h3>A&ntilde;adir Productos</h3>
+
+                  <form class="form-horizontal"  action="../Controller/redireccion.php" method="POST"
+                    enctype="multipart/form-data">
+                    <div class="form-group">
+                      <label class="col-lg-3 control-label">Identificador:</label>
+                      <div class="col-lg-8">
+                        <input class="form-control" type="text" name="identificador_producto" required>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-lg-3 control-label">Nombre:</label>
+                      <div class="col-lg-8">
+                        <input class="form-control" type="text" name="nombre_producto" required>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-lg-3 control-label">Descripcion:</label>
+                      <div class="col-lg-8">
+                        <input class="form-control" type="text" name="descripcion_producto" required>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-lg-3 control-label">Precio</label>
+                      <div class="col-lg-8">
+                        <input class="form-control" type="number" step="any" name="precio_producto" required>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-lg-3 control-label">Imagen</label>
+                      <div class="col-lg-8">
+                        <input type="file" class="form-control-file" name="imagen_producto" id="imagen_producto" accept="image/png"  required/>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-lg-3 control-label">Talla (En caso de que sea ropa):</label>
+                      <div class="col-lg-8">
+                        <input class="form-control" type="text" name="talla_producto">
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-lg-3 control-label">Color:</label>
+                      <div class="col-lg-8">
+                        <input class="form-control" type="text" name="color_producto" required>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-lg-3 control-label">Cantidad:</label>
+                      <div class="col-lg-8">
+                        <input class="form-control" type="number" name="cantidad_producto" required>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-lg-3 control-label">Categoria:</label>
+                      <div class="col-lg-8">
+                        <input class="form-control" type="text" name="categoria_producto" required>
+                      </div>
+                    </div>
+
+                    <div class="form-group col-lg-3">
+                      <button type="submit" class="btn btn-dark">Anadir Productos</button>
+                    </div>
+                    <input type="hidden" name="accion" id="accion" value="anadirProducto" />
+                  </form>
+                </div>
+
+                <div id="menu2" class="container tab-pane fade"><br>
+                  <div class="container">
+                    <div class="card text-center">
+                        <div class="card-header">
+                         
+                        </div>
+                        <div class="card-body" id="pedido">
+                            
+                         
+                        </div>
+                        <nav aria-label="Page navigation example">
+                          <div>
+              
+                              <ul class="pagination justify-content-center" id="pagicionPedidosProcesarUser"></ul>
+                             
+                          </div>
+                         
+                      </nav>
+                       
+                      </div>
+            
+                    </div>
+                </div>
+
+                <div id="pedidoEnviadoRecibido" class="container tab-pane fade"><br>
+                  <div class="container">
+                    <div class="card text-center">
+                        <div class="card-header">
+                         
+                        </div>
+                        <div class="card-body" id="pedidoEnviadoRecibidoCard">
+                            
+                         
+                        </div>
+                        <nav aria-label="Page navigation example">
+                          <div>
+              
+                              <ul class="pagination justify-content-center" id="pagicionPedidosEnviadoCanceladoUser"></ul>
+                             
+                          </div>
+                         
+                      </nav>
+                      </div>
+                    </div>
+                </div>
+
+                <div id="menu3" class="container tab-pane fade"><br>
+                  <div class="container">
+                    <div class="card text-center">
+                        <div class="card-header">
+                         
+                        </div>
+                        <div class="card-body" id="pedidosParaProcesarCard">
+                            
+                         
+                        </div>
+                        <nav aria-label="Page navigation example">
+                          <div id="paginaPedidosProcesar">
+              
+                              <ul class="pagination justify-content-center" id="pagicionPedidosProcesar"></ul>
+                             
+                          </div>
+                         
+                      </nav>
+                       
+                      </div>
+            
+                    </div>
+                </div>
+                <div id="menu4" class="container tab-pane fade"><br>
+                  <form name="theForm"> 
+                    <div class="card text-center">
+                        <div class="card-header">
+                         
+                        </div>
+                        <div class="card-body table-responsive">
+
+                         
+                          <table class="table table-sm">
+                            <thead>
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">IMG</th>
+                                <th scope="col">ID</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Descripcion</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col">Color</th>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">Categoria</th>
+                              </tr>
+                            </thead>
+                            <tbody id="productosMostrar">
+                            
+                            </tbody>
+                          </table>
+                         
+                         
+                        </div>
+
+                        <nav aria-label="Page navigation example">
+                          <div id="pagi">
+              
+                              <ul class="pagination justify-content-center" id="pagicionProductosPerfil"></ul>
+                             
+                          </div>
+                          <div id="botones" style="margin-top: 5%;margin-bottom: 5%;">
+              
+                            <button type="button" class="btn btn-info" onclick="editarId();">Editar</button>
+                            <button type="button" class="btn btn-danger" onclick="borrarId();">Borrar</button>
+                           
+                        </div>
+                          
+                         
+                      </nav>
+                       
+                      </div>
+                    </form>
+              
+                </div>
+                <div id="menu5" class="container tab-pane fade"><br>
+                  <div class="container">
+                    <div class="card text-center">
+                        <div class="card-header">
+                         
+                        </div>
+                        <div class="card-body" id="usuarios">
+                            
+                         
+                        </div>
+                        <nav aria-label="Page navigation example">
+                          <div id="paginaUsuarios">
+              
+                              <ul class="pagination justify-content-center" id="paginacionUsuarios"></ul>
+                             
+                          </div>
+
+                          <div id="botones" style="margin-top: 5%;margin-bottom: 5%;">
+              
+                            <button type="button" class="btn btn-danger" onclick="eliminarUser();">Eliminar usuario</button>
+                        
+                           
+                        </div>
+                        
+                      </nav>
+                      
+                      </div>
+            
+                    </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+ 
+ <footer class="text-light" style="margin-top: 10%;">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-3 col-lg-4 col-xl-3">
+              <h5>Sobre Mi</h5>
+              <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+              <p class="mb-0">
+                  Web creada por Jesus Maria De Felipe Prado, esta web consiste en venta de productos y pagos online con criptomonedas.
+              </p>
+          </div>
+
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
+              <h5>Informacion</h5>
+              <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+              <ul class="list-unstyled">
+                  <li><a href="https://twitter.com/JesusDeFelipe17">Twitter</a></li>
+                  <li><a href="https://www.instagram.com/jesusdefelipe17/">Instagram develop</a></li>
+                  <li><a href="https://www.instagram.com/jmdfcompany/">Instagram Company</a></li>
+              </ul>
+          </div>
+
+       
+
+          <div class="col-md-4 col-lg-3 col-xl-3">
+              <h5>Contact</h5>
+              <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+              <ul class="list-unstyled">
+                  <li><i class="fa fa-home mr-2"></i>JMFCompany</li>
+                  <li><i class="fa fa-envelope mr-2"></i> jmdfcompany@gmail.com</li>
+                  <li><i class="fa fa-phone mr-2"></i>670778054</li>
+              </ul>
+          </div>
+          <div class="col-12 copyright mt-3">
+              <p class="float-left">
+                  <a href="#">Volver Arriba</a>
+              </p>
+              <p class="text-right text-muted">Creado por JMF <span>v. 1.0</span></p>
+          </div>
+      </div>
+  </div>
+</footer>    
+
+  <script>
+
+    $(document).ready(function () {
+      $(window).on('scroll', function () {
+        if ($(window).scrollTop() > 1) {
+
+          $('.navbar').addClass('bg-light');
+        } else {
+          $('.navbar').removeClass('bg-light');
+        }
+
+      });
+    });
+
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>ALL FOR ONE - INICIO</title>
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link href="View/css/navBar.css" rel="stylesheet" >
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="View/css/index.css" rel="stylesheet" >
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="View/js/Carrito.js"></script>
+<script src="View/js/CarritoFuncionalidad.js"></script>
+<script src="View/js/controllerIndex.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="shortcut icon" href="View/imagenes/favicon.ico" type="image/x-icon">
+<link rel="icon" href="View/imagenes/favicon.ico" type="image/x-icon">
+
+
+</head>
+
+<body>
+  <div id="div-cookies" style="display: none;">
+    Necesitamos usar cookies para que funcione todo, si permanece aqui acepta su uso, mas informacion en
+    <a hreflang="es" href="https://es.wikipedia.org/wiki/Aviso_legal">Aviso Legal</a>
+    y la
+    <a hreflang="es" href="https://www.aepd.es/es/politica-de-privacidad-y-aviso-legal">Politica de Privacidad</a>.
+    <button type="button" class="btn btn-sm btn-primary" onclick="acceptCookies()">
+    Acepto el uso de cookies
+    </button>
+    </div>
+    
+  <header class="header">
+    <nav class="navbar navbar-expand-lg fixed-top py-3 ">
+        <div class="container"><a href="index.html" class="navbar-brand text-uppercase font-weight-bold" style="color: black;"><img src="View/imagenes/logo.png" alt="logo"></a>
+            <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
+           
+              
+         
+            <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto" id="navB">
+                    <li class="nav-item active" id="login"><a href="View/perfil.html" class="nav-link text-uppercase font-weight-bold" style="color: black;" id="perfil">Perfil</a></li>
+                    <li class="nav-item"><a href="View/checkout.html" class="nav-link text-uppercase font-weight-bold" style="color: black;" id="carrito"><i class="fa fa-shopping-cart"></i></a></li>
+                    <li class="nav-item"><a href="View/productos.html" class="nav-link text-uppercase font-weight-bold" style="color: black;" id="productos">Productos</a></li>
+                    <li class="nav-item"><a href="View/contacto.html" class="nav-link text-uppercase font-weight-bold" style="color: black;" id="contacto">Contacto</a></li>
+                   
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+
+  <hr style="margin-top:75px; margin-bottom: 0%;"> 
+
+  <div id="bannerInicio" class="carousel slide" data-ride="carousel" style="width: 100%;">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="View/imagenes/banner1.jpg" alt="banner1">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="View/imagenes/banner2.jpg" alt="banner2">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="View/imagenes/banner3.jpg" alt="banner3">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#bannerInicio" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+     
+    </a>
+    <a class="carousel-control-next" href="#bannerInicio" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+   
+    </a>
+  </div>
+ 
+  
+   
+  
+     
+<div class="container">
+      
+          <ul class="nav nav-pills nav-justified" role="tablist" style="margin-top: 3%;">
+            
+            <li role="presentation" class="nav-item nav-link"><a href="#ordenadores" role="tab" class="btn btn-block blue-btn active-btn text-uppercase font-weight-bold" data-toggle="tab" style=" color: black;">PC</a></li>
+            <li role="presentation" class="nav-item nav-link"><a href="#android" class="btn btn-block blue-btn text-uppercase font-weight-bold" role="tab" data-toggle="tab" style="color: black;">Android</a></li>
+            <li role="presentation" class="nav-item nav-link"><a href="#apple" class="btn btn-block blue-btn text-uppercase font-weight-bold" role="tab" data-toggle="tab" style="color: black;">Apple</a></li>
+            <li role="presentation" class="nav-item nav-link"><a href="#informatica" class="btn btn-block blue-btn text-uppercase font-weight-bold" role="tab" data-toggle="tab" style="color: black;">Informatica</a></li>
+           
+          </ul>
+
+          <hr>
+          <div class="title" style="padding-left: 25px;margin-left: 0px;padding-right: 0px;margin-top: 3%;">
+            
+              <h4>MEJORES <strong>PRODUCTOS</strong><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Emoji_u1f525.svg/1200px-Emoji_u1f525.svg.png" width="30" alt="key"></h4>
+              
+           
+          </div>
+
+
+          
+          <div class="tab-content"  style="margin-top: 3%;">
+            <div role="tabpanel" class="tab-pane active" id="ordenadores">
+              
+              <div class="container2"  id="productosOrdenador">
+                <div class="row col-12" style="padding-left: 5px;margin-left: 0px;padding-right: 0px;">
+                    <div class="col-12">
+                        <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
+            
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row" id="carta1">
+            
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div role="tabpanel" class="tab-pane" id="android">
+                <div class="container2"  id="productosAndroid">
+                  <div class="row col-12" style="padding-left: 5px;margin-left: 0px;padding-right: 0px;">
+                      <div class="col-12">
+                          <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+              
+                              <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                      <div class="row" id="carta2">
+              
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+            </div>
+
+            <div role="tabpanel" class="tab-pane" id="apple">
+              <div class="container2"  id="productosApple">
+                <div class="row col-12" style="padding-left: 5px;margin-left: 0px;padding-right: 0px;">
+                    <div class="col-12">
+                        <div id="carouselExampleIndicators3" class="carousel slide" data-ride="carousel">
+            
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row" id="carta3">
+            
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="informatica">
+            <div class="container2"  id="productosInformatica">
+              <div class="row col-12" style="padding-left: 5px;margin-left: 0px;padding-right: 0px;">
+                  <div class="col-12">
+                      <div id="carouselExampleIndicators4" class="carousel slide" data-ride="carousel">
+          
+                          <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                  <div class="row" id="carta4">
+          
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+
+
+          </div>
+          <hr>
+      </div>
+     
+      <div class="container">
+        
+        <div class="container">
+
+          
+          <div class="row" style="text-align:center; margin-top: 3%;">
+            <div class="col-lg-4">
+              <img class="rounded-circle" src="View/imagenes/perfil1.jpg" width="140" height="140" alt="imagen1">
+              <h2>Piky</h2>
+              <p>Productos de muy buena calidad. Recientemente he comprado un Iphone 12 y me llego super rapido. Recomiendo 100% esta tienda para comprar productos oficiales de Apple.</p>
+             
+            </div>
+            <div class="col-lg-4">
+              <img class="rounded-circle" src="View/imagenes/perfil2.jpg"  width="140" height="140" alt="imagen2">
+              <h2>ShotCut</h2>
+              <p>Pedi un pc gamer para un regalo de cumple y me llego super rapido, tiene envios a todas partes del mundo y pude pillar una rebaja del 20%. tiene mucha variedad de productos oficiales</p>
+              
+            </div>
+            <div class="col-lg-4">
+              <img class="rounded-circle" src="View/imagenes/perfil3.jpg" width="140" height="140" alt="imagen3">
+              <h2>Ghost</h2>
+              <p>Tienen bastantes modelos de movil para android y a bastante buen precio, por lo que decidi comprar uno de ellos y estoy encantando. Vovleria a comprar en esta pagina sin duda</p>
+            
+            </div>
+          </div>
+  
+  
+         
+  
+          <hr class="featurette-divider">
+  
+          <div class="row featurette" >
+            <div class="col-md-7">
+              <h2 class="featurette-heading">PC Gamer Extremo</h2>
+              <p class="lead">
+                Es el hibrido perfecto entre el ofico y el trabajo.Su espectacular rendimiento no pasara desapercibido. Estas a un paso de poder jugar de forma fluida con las mejores calidades graficas y en altas resoluciones.
+              </p>
+            </div>
+            <div class="col-md-5">
+              <img class="featurette-image img-fluid mx-auto"  alt="500x500" style="width: 500px; height: 450px;" src="View/imagenes/pc.jpg" data-holder-rendered="true">
+            </div>
+          </div>
+  
+          <hr class="featurette-divider">
+  
+          <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+              <h2 class="featurette-heading">Mas alla de la velocidad.</h2>
+              <p class="lead">
+                Un chip prodigioso. Tecnologia 5G. Sistema avanzado de camara dual. Parte delantera con Ceramic Shield, mas resistente que cualquier vidrio de smartphone. Una pantalla OLED espectacular. Y dos tama&ntilde;os: ideal y perfecto.
+              </p>
+            </div>
+            <div class="col-md-5 order-md-1">
+              <img class="featurette-image img-fluid mx-auto" alt="500x500" src="View/imagenes/ip.jpg" data-holder-rendered="true" style="width: 500px; height: 450px;">
+            </div>
+          </div>
+  
+          <hr class="featurette-divider">
+  
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading">Alexa, pon musica en todas partes</h2>
+              <p class="lead">
+                Pide una cancion, un artista o un genero en Amazon Music, Apple Music, Spotify, Deezer y mas. Con la musica multiestancia, las canciones, las emisoras de radio y los podcasts te pueden acompa&ntilde;ar por toda la casa si tienes dispositivos Echo compatibles en otras habitaciones.
+              </p>
+            </div>
+            <div class="col-md-5">
+              <img class="featurette-image img-fluid mx-auto"  alt="500x500"  src="View/imagenes/in.png" data-holder-rendered="true" style="width: 1000px; height: 450px;">
+            </div>
+          </div>
+  
+          <hr class="featurette-divider">
+  
+       
+  
+        </div>
+
+      
+
+      </div>
+
+    
+
+     
+      <div class="container">
+      
+        <div class="title article-margin" style="padding-left: 25px;margin-left: 0px;padding-right: 0px;">
+          
+            <h4>SEGURO QUE <strong>TE INTERESA</strong></h4>
+         
+        </div>
+        <div class="row col-12" style="padding-left: 5px;margin-left: 0px;padding-right: 0px;margin-top: 3%;">
+          <div class="col-12">
+              <div id="carouselExampleIndicators5" class="carousel slide" data-ride="carousel">
+  
+                  <div class="carousel-inner">
+                      <div class="carousel-item active">
+                          <div class="row" id="baratoWeb">
+  
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+      
+      
+    
+      
+
+     
+  
+ <footer class="text-light" style="margin-top: 3%;">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-3 col-lg-4 col-xl-3">
+              <h5>Sobre Mi</h5>
+              <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+              <p class="mb-0">
+                  Web creada por Jesus Maria De Felipe Prado, esta web consiste en venta de productos y pagos online con criptomonedas.
+              </p>
+          </div>
+
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
+              <h5>Informacion</h5>
+              <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+              <ul class="list-unstyled">
+                  <li><a href="https://twitter.com/JesusDeFelipe17">Twitter</a></li>
+                  <li><a href="https://www.instagram.com/jesusdefelipe17/">Instagram develop</a></li>
+                  <li><a href="https://www.instagram.com/jmdfcompany/">Instagram Company</a></li>
+              </ul>
+          </div>
+
+       
+
+          <div class="col-md-4 col-lg-3 col-xl-3">
+              <h5>Contact</h5>
+              <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+              <ul class="list-unstyled">
+                  <li><i class="fa fa-home mr-2"></i>JMFCompany</li>
+                  <li><i class="fa fa-envelope mr-2"></i> jmdfcompany@gmail.com</li>
+                  <li><i class="fa fa-phone mr-2"></i>670778054</li>
+              </ul>
+          </div>
+          <div class="col-12 copyright mt-3">
+              <p class="float-left">
+                  <a href="#">Volver Arriba</a>
+              </p>
+              <p class="text-right text-muted">Creado por JMF <span>v. 1.0</span></p>
+          </div>
+      </div>
+  </div>
+</footer>    
+ 
+   
+</body>
+
+</html>

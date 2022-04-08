@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>ALL FOR ONE - CHECKOUT</title>
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link href="css/navBar.css" rel="stylesheet" >
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://www.paypalobjects.com/api/checkout.js"></script>
+<script src="https://unpkg.com/@metamask/legacy-web3@latest/dist/metamask.web3.min.js"></script>
+<script src="js/checkout.js"></script>
+<link href="css/paypalButton.css" rel="stylesheet" >
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+<link href="css/checkout.css" rel="stylesheet" >
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="shortcut icon" href="imagenes/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="imagenes/favicon.ico" type="image/x-icon">
+
+
+
+</head>
+
+<body>
+    
+    <header class="header">
+        <nav class="navbar navbar-expand-lg fixed-top py-3 ">
+            <div class="container"><a href="../index.html" class="navbar-brand text-uppercase font-weight-bold" style="color: black;"><img src="imagenes/logo.png" alt="logo"></a>
+                <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
+                
+                <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto" id="navB">
+                        <li class="nav-item active" id="login"><a href="perfil.html" class="nav-link text-uppercase font-weight-bold" style="color: black;" id="perfil">Perfil</a></li>
+                        <li class="nav-item"><a href="checkout.html" class="nav-link text-uppercase font-weight-bold" style="color: black;" id="carritoo"><i class="fa fa-shopping-cart"></i></a></li>
+                        <li class="nav-item"><a href="productos.html" class="nav-link text-uppercase font-weight-bold" style="color: black;" id="productos">Productos</a></li>
+                        <li class="nav-item"><a href="contacto.html" class="nav-link text-uppercase font-weight-bold" style="color: black;" id="contacto">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+  <hr style="margin-top:75px"> 
+
+
+  <div class="container">
+    
+      <div class="py-5 text-center">
+         
+          <h2>Rellena los datos para realizar su compra</h2>
+             </div>
+      <div class="row">
+          <div class="col-md-5 order-md-2 mb-4" >
+
+            <div class="row">
+                <div class="col">
+                    <h4>
+                        <span class="text-muted">Tu carrito</span>
+                    </h4>
+                </div>
+                <div class="col-2">
+                    <div id="cantidadProductos">
+                   
+                    </div>
+                </div>
+              </div>
+              
+              
+             
+              <div class="border" id="carrito">
+
+              </div>
+              
+              <div class="align-items-center" id="pay" style="text-align: center; ">
+                <div class="align-items-center" id="validePaypal" style="text-align: center;"> </div>
+                <div style=" display:none;" id="paypal-button-container" ></div>
+                <div class="align-items-center" id="pagarBalance" style="text-align: center;"> </div>
+                
+              </div>
+          </div>
+          <div class="col-md-7 order-md-1">
+              <h4 class="mb-3">Datos de compra</h4>
+              <form class="needs-validation" novalidate>
+                  <div class="row">
+                      <div class="col-md-6 mb-3">
+                          <label>Nombre</label>
+                          <input type="text" class="form-control" id="nombre" name="nombre" placeholder="" value="" required="">
+                          <div class="invalid-feedback"> El nombre es obligatorio. </div>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                          <label>Apellidos</label>
+                          <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="" value="" required="">
+                          <div class="invalid-feedback">Los apellidos son obligatorios </div>
+                      </div>
+                  </div>
+                
+                  <div class="mb-3">
+                      <label>Direccion 1</label>
+                      <input type="text" class="form-control" id="direccion" name="direccion" required="">
+                      <div class="invalid-feedback"> La direccion de envio es obligatoria </div>
+                  </div>
+                  <div class="mb-3">
+                      <label>Direccion 2 <span class="text-muted">(Opcional)</span></label>
+                      <input type="text" class="form-control"  id="direccion2" name="direccion2">
+                  </div>
+                  <div class="row">
+                      <div class="col-md-5 mb-3">
+                          <label>Ciudad</label>
+                            <input type="text" class="form-control" id="ciudad" name="ciudad" required="">
+                          <div class="invalid-feedback"> La ciudad es obligatoria </div>
+                      </div>
+                      <div class="col-md-4 mb-3">
+                          <label>Provincia</label>
+                          <select class="custom-select d-block w-100" id="provincia" name="provincia" required="">
+                            <option value="">Elige Provincia</option>
+                            <option value="Alava/Araba">Alava/Araba</option>
+                            <option value="Albacete">Albacete</option>
+                            <option value="Alicante">Alicante</option>
+                            <option value="Almeria">Almeria</option>
+                            <option value="Asturias">Asturias</option>
+                            <option value="Avila">Avila</option>
+                            <option value="Badajoz">Badajoz</option>
+                            <option value="Baleares">Baleares</option>
+                            <option value="Barcelona">Barcelona</option>
+                            <option value="Burgos">Burgos</option>
+                            <option value="Caceres">Caceres</option>
+                            <option value="Cadiz">Cadiz</option>
+                            <option value="Cantabria">Cantabria</option>
+                            <option value="Castellon">Castellon</option>
+                            <option value="Ceuta">Ceuta</option>
+                            <option value="Ciudad Real">Ciudad Real</option>
+                            <option value="Cordoba">Cordoba</option>
+                            <option value="Cuenca">Cuenca</option>
+                            <option value="Gerona/Girona">Gerona/Girona</option>
+                            <option value="Granada">Granada</option>
+                            <option value="Guadalajara">Guadalajara</option>
+                            <option value="Guipuzcoa/Gipuzkoa">Guipuzcoa/Gipuzkoa</option>
+                            <option value="Huelva">Huelva</option>
+                            <option value="Huesca">Huesca</option>
+                            <option value="Jaen">Jaen</option>
+                            <option value="La Coruna/A Coruna">La Coruna/A Coruna</option>
+                            <option value="La Rioja">La Rioja</option>
+                            <option value="Las Palmas">Las Palmas</option>
+                            <option value="Leon">Leon</option>
+                            <option value="Lerida/Lleida">Lerida/Lleida</option>
+                            <option value="Lugo">Lugo</option>
+                            <option value="Madrid">Madrid</option>
+                            <option value="Malaga">Malaga</option>
+                            <option value="Melilla">Melilla</option>
+                            <option value="Murcia">Murcia</option>
+                            <option value="Navarra">Navarra</option>
+                            <option value="Orense/Ourense">Orense/Ourense</option>
+                            <option value="Palencia">Palencia</option>
+                            <option value="Pontevedra">Pontevedra</option>
+                            <option value="Salamanca">Salamanca</option>
+                            <option value="Segovia">Segovia</option>
+                            <option value="Sevilla">Sevilla</option>
+                            <option value="Soria">Soria</option>
+                            <option value="Tarragona">Tarragona</option>
+                            <option value="Tenerife">Tenerife</option>
+                            <option value="Teruel">Teruel</option>
+                            <option value="Toledo">Toledo</option>
+                            <option value="Valencia">Valencia</option>
+                            <option value="Valladolid">Valladolid</option>
+                            <option value="Vizcaya/Bizkaia">Vizcaya/Bizkaia</option>
+                            <option value="Zamora">Zamora</option>
+                            <option value="Zaragoza">Zaragoza</option>
+                          </select>
+                          <div class="invalid-feedback"> Please provide a valid state. </div>
+                      </div>
+                      <div class="col-md-3 mb-3">
+                          <label>Codigo Postal</label>
+                          <input type="text" class="form-control" id="codigoPostal" name="codigoPostal" placeholder="" required="">
+                          <div class="invalid-feedback"> El codigo postal es obligatorio </div>
+                      </div>
+                  </div>
+
+                  <hr class="mb-4">
+                 
+               
+              </form>
+          </div>
+      </div>
+         
+  </div>
+  
+
+  
+  <footer class="text-light" style="margin-top: 3%;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-lg-4 col-xl-3">
+                <h5>Sobre Mi</h5>
+                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                <p class="mb-0">
+                    Web creada por Jesus Maria De Felipe Prado, esta web consiste en venta de productos y pagos online con criptomonedas.
+                </p>
+            </div>
+  
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
+                <h5>Informacion</h5>
+                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                <ul class="list-unstyled">
+                    <li><a href="https://twitter.com/JesusDeFelipe17">Twitter</a></li>
+                    <li><a href="https://www.instagram.com/jesusdefelipe17/">Instagram develop</a></li>
+                    <li><a href="https://www.instagram.com/jmdfcompany/">Instagram Company</a></li>
+                </ul>
+            </div>
+  
+         
+  
+            <div class="col-md-4 col-lg-3 col-xl-3">
+                <h5>Contact</h5>
+                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-home mr-2"></i>JMFCompany</li>
+                    <li><i class="fa fa-envelope mr-2"></i> jmdfcompany@gmail.com</li>
+                    <li><i class="fa fa-phone mr-2"></i>670778054</li>
+                </ul>
+            </div>
+            <div class="col-12 copyright mt-3">
+                <p class="float-left">
+                    <a href="#">Volver Arriba</a>
+                </p>
+                <p class="text-right text-muted">Creado por JMF <span>v. 1.0</span></p>
+            </div>
+        </div>
+    </div>
+  </footer>    
+                
+   
+
+
+
+   
+</body>
+
+</html>

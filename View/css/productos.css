@@ -1,0 +1,22 @@
+.categorias li:hover {
+    background-color: #007bff;
+}
+.categorias li:hover a {
+    color: #ffffff;
+}
+.categorias li a {
+    color: #343a40;
+}
+
+.pagination {
+    margin-top: 20px;
+}
+footer {
+    background: #111111;
+    padding: 40px;
+}
+footer a {
+    color: #f8f9fa
+}
+
+  

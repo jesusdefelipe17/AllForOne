@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>ALL FOR ONE - CONTACTO</title>
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link href="css/navBar.css" rel="stylesheet" >
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="js/contacto.js"></script>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+<link href="css/contacto.css" rel="stylesheet" > 
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="shortcut icon" href="imagenes/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="imagenes/favicon.ico" type="image/x-icon">
+
+
+</head>
+
+<body>
+    
+    <header class="header">
+        <nav class="navbar navbar-expand-lg fixed-top py-3 ">
+            <div class="container"><a href="../index.html" class="navbar-brand text-uppercase font-weight-bold" style="color: black;"><img src="imagenes/logo.png" alt="logo"></a>
+                <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
+                
+                <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto" id="navB">
+                        <li class="nav-item active" id="login"><a href="perfil.html" class="nav-link text-uppercase font-weight-bold" style="color: black;" id="perfil">Perfil</a></li>
+                        <li class="nav-item"><a href="checkout.html" class="nav-link text-uppercase font-weight-bold" style="color: black;" id="carrito"><i class="fa fa-shopping-cart"></i></a></li>
+                        <li class="nav-item"><a href="productos.html" class="nav-link text-uppercase font-weight-bold" style="color: black;" id="productos">Productos</a></li>
+                        <li class="nav-item"><a href="contacto.html" class="nav-link text-uppercase font-weight-bold" style="color: black;" id="contacto">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+  <hr style="margin-top:75px"> 
+
+
+  <div class="container">
+    
+      <div class="py-5 text-center">
+         
+          <h2>Envianos un mensaje</h2>
+             </div>
+         
+          <div class="col-md-12 order-md-1">
+              <form class="needs-validation"  action="../Controller/redireccion.php" method="POST">
+                  <div class="row">
+                      <div class="col-md-6 mb-3">
+                          <label>Nombre</label>
+                          <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre..." value="" required>
+                          <div class="invalid-feedback"> Nombre requerido </div>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                          <label>Email</label>
+                          <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com..." required>
+                      <div class="invalid-feedback"> Email requerido </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="telefono">Telefono de contacto</label>
+                        <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Telefono..." value="" required>
+                        <div class="invalid-feedback"> Telefono requerido </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label>Asunto</label>
+                        <input type="text" class="form-control" id="asunto" name="asunto" placeholder="Asunto..." required>
+                    <div class="invalid-feedback"> Asunto requerido </div>
+                    </div>
+                </div>
+                  
+                <div class="row" style="margin-bottom: 3%;">
+                <div class="col-md-12">
+                    <label>Mensaje</label>
+                    <textarea class="form-control" id="mensaje" name="mensaje" rows="10"  placeholder="Escribe tu mensaje para nosotros..." required></textarea>
+                <div class="invalid-feedback"> Mensaje requerido </div>
+                </div>
+            </div>
+            <input type="hidden" name="accion" id="accion" value="enviarMensaje">
+            <button class="btn btn-info btn-lg btn-block" type="submit">Enviar mensaje</button>
+              </form>
+          </div>
+         
+  </div>
+  
+
+
+  <footer class="text-light" style="margin-top: 3%;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-lg-4 col-xl-3">
+                <h5>Sobre Mi</h5>
+                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                <p class="mb-0">
+                    Web creada por Jesus Maria De Felipe Prado, esta web consiste en venta de productos y pagos online con criptomonedas.
+                </p>
+            </div>
+  
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
+                <h5>Informacion</h5>
+                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                <ul class="list-unstyled">
+                    <li><a href="https://twitter.com/JesusDeFelipe17">Twitter</a></li>
+                    <li><a href="https://www.instagram.com/jesusdefelipe17/">Instagram develop</a></li>
+                    <li><a href="https://www.instagram.com/jmdfcompany/">Instagram Company</a></li>
+                </ul>
+            </div>
+  
+         
+  
+            <div class="col-md-4 col-lg-3 col-xl-3">
+                <h5>Contact</h5>
+                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-home mr-2"></i>JMFCompany</li>
+                    <li><i class="fa fa-envelope mr-2"></i> jmdfcompany@gmail.com</li>
+                    <li><i class="fa fa-phone mr-2"></i>670778054</li>
+                </ul>
+            </div>
+            <div class="col-12 copyright mt-3">
+                <p class="float-left">
+                    <a href="#">Volver Arriba</a>
+                </p>
+                <p class="text-right text-muted">Creado por JMF <span>v. 1.0</span></p>
+            </div>
+        </div>
+    </div>
+  </footer>    
+                
+   
+
+
+
+   
+</body>
+
+</html>
